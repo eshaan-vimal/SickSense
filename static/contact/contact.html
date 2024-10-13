@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SickSense - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lexend Deca', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a237e;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            padding: 10px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background-color: rgba(26, 35, 126, 0.5);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Yeseva One', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero {
+            color: white;
+            text-align: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-heading {
+            font-family:'Lexend Deca', sans-serif;
+            margin-top: 200px;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .contact-form, .contact-info {
+            width: 48%;
+            text-align: left;
+        }
+
+        .contact-form h2 {
+            font-family:'Lexend Deca', sans-serif;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: white;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #5c6bc0;
+        }
+
+        .info-box {
+            margin-bottom: 20px;
+        }
+
+        .info-box h4 {
+            font-family: 'Yeseva One', cursive;
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .info-box p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        #map {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 3rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-family: 'Yeseva One', cursive;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #3949ab;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #5c6bc0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form, .contact-info {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../../static/home/home.html'">SickSense</div>
+            <ul>
+                <li><a href="../../static/home/home.html">Home</a></li>
+                <li><a href="../../static/about/about.html">About Us</a></li>
+                <li><a href="../../static/contact/contact.html">Contact Us</a></li>
+                <li><a href="../../templates/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content fade-in">
+        <section class="hero">
+            <h1 class="main-heading">Contact Us</h1>
+            <p class="subheading">We're here to assist you. Feel free to reach out!</p>
+        </section>
+
+        <div class="contact-container">
+            <div class="contact-form">
+                <h2>Get in Touch</h2>
+                <form action="#" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="info-box">
+                    <h4>Emergency</h4>
+                    <p>+91 123456789</p>
+                    <p>+91 987654321</p>
+                </div>
+                <div class="info-box">
+                    <h4>Location</h4>
+                    <p>Mumbai, Maharashtra</p>
+                    <p>India</p>
+                </div>
+                <div class="info-box">
+                    <h4>Email</h4>
+                    <p>info@SickSense.com</p>
+                    <p>support@SickSense.com</p>
+                </div>
+                <div class="info-box">
+                    <h4>Working Hours</h4>
+                    <p>Mon-Sat | 09:00-20:00</p>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SickSense</h3>
+                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 SickSense. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        window.onload = function () {
+            particlesJS('particles-js', {
+    particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
+        opacity: { value: 0.4, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 1.6, direction: 'none', random: false, straight: false, out_mode: 'out', attract: { enable: false } }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 4 }
+        }
+    },
+    retina_detect: true
+});
+        }
+        
+        function initMap() {
+            const location = { lat: 19.0760, lng: 72.8777 }; // Mumbai coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#242f3e"}]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"color": "#242f3e"}]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#746855"}]
+                    },
+                    {
+                        "featureType": "administrative.locality",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#d59563"}]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#d59563"}]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#263c3f"}]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#6b9a76"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#38414e"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{"color": "#212a37"}]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#9ca5b3"}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#746855"}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [{"color": "#1f2835"}]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#f3d19c"}]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#2f3948"}]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#d59563"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#17263c"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#515c6d"}]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [{"color": "#17263c"}]
+                    }
+                ]
+            });
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+        
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Message sent! We'll get back to you soon.");
+            this.reset(); // Reset the form fields
+        });
+        
+    </script>
+</body>
+
+</html>

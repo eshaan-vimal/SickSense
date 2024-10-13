@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SickSense - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Lexend Deca', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a237e;
+            overflow-x: hidden;
+            color: white;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            padding: 10px;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background-color: rgba(26, 35, 126, 0.5);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Yeseva One', cursive;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero {
+            color: white;
+            text-align: center;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .main-heading {
+            font-family: 'Yeseva One', cursive;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .services-heading {
+            font-size: 2rem;
+            font-family: 'Lexend Deca', sans-serif;
+            margin-top: 5rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 1.5rem auto;
+            width: 85%;
+            max-width: 900px;
+        }
+
+        .quote-section {
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #f0f0f0;
+        }
+
+        .quote-author {
+            margin-top: 0.5rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 3rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-family: 'Yeseva One', cursive;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #3949ab;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #5c6bc0;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-buttons-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='../../static/home/home.html'">SickSense</div>
+            <ul>
+                <li><a href="../../static/home/home.html">Home</a></li>
+                <li><a href="../../static/about/about.html">About Us</a></li>
+                <li><a href="../../static/contact/contact.html">Contact Us</a></li>
+                <li><a href="../../templates/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero fade-in">
+        <h1 style="margin-top: 200px; font-size:60px">About Us</h1>
+        <p class="subheading">Your Health, Powered by AI-driven Insights</p>
+    </section>
+
+    <main class="main-content fade-in">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="about-text">
+            SickSense is revolutionizing healthcare with AI-powered predictions and personalized insights tailored to your symptoms, lifestyle, and environment. Our mission is to make healthcare accessible and intelligent, offering users real-time, personalized health data.
+        </p>
+
+        <h2 class="section-title">Our Vision</h2>
+        <p class="about-text">
+            At SickSense, we believe in the future of healthcare where AI helps us prevent illness before it strikes. Our platform provides users with actionable insights by analyzing their lifestyle choices, environmental factors, and symptoms. This empowers individuals to make smarter health decisions and adopt healthier habits early.
+        </p>
+
+        <h2 class="section-title">How We Help</h2>
+        <p class="about-text">
+            We offer personalized disease predictions, timely health reports, and smart lifestyle recommendations that are all based on data science and artificial intelligence. Whether it's a suggestion for a lifestyle change or alerting users to see a doctor based on our diagnostic model, we provide the information you need, when you need it.
+        </p>
+
+        <div class="quote-section">
+            <p class="quote-text">"Transforming healthcare with the power of AI and data-driven insights, one person at a time."</p>
+            <p class="quote-author">- SickSense Team</p>
+        </div>
+
+        <h2 class="section-title">Our Goals</h2>
+        <p class="about-text">
+            1. **Predictive Diagnosis**: With the help of AI, SickSense aims to provide accurate and early predictions of potential health risks.
+        </p>
+        <p class="about-text">
+            2. **Health Reports**: SickSense generates easy-to-understand health reports based on real-time data to help users stay informed about their health status.
+        </p>
+        <p class="about-text">
+            3. **Doctor Connect**: We also aim to facilitate instant connections between users and healthcare professionals to ensure timely treatment.
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SickSense</h3>
+                <p>Leading the Way in Medical Excellence, Trusted Care.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 SickSense. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            particlesJS('particles-js', {
+    particles: {
+        number: { value: 100, density: { enable: true, value_area: 800 } },
+        color: { value: '#ffffff' },
+        shape: { type: 'circle', stroke: { width: 0, color: '#000000' } },
+        opacity: { value: 0.4, random: false },
+        size: { value: 3, random: true },
+        line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+        move: { enable: true, speed: 1.6, direction: 'none', random: false, straight: false, out_mode: 'out', attract: { enable: false } }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+        modes: {
+            repulse: { distance: 100, duration: 0.4 },
+            push: { particles_nb: 4 }
+        }
+    },
+    retina_detect: true
+});
+        }
+    </script>
+</body>
+
+</html>
