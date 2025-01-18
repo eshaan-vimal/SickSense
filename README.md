@@ -1,1 +1,1 @@
-# SickSense
+# SickSense - Imagine Hackathon
